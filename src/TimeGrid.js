@@ -13,6 +13,7 @@ import { notify } from './utils/helpers'
 import { inRange, sortEvents } from './utils/eventLevels'
 import Resources from './utils/Resources'
 import { DayLayoutAlgorithmPropType } from './utils/propTypes'
+import { head } from 'lodash'
 
 export default class TimeGrid extends Component {
   constructor(props) {
@@ -144,6 +145,7 @@ export default class TimeGrid extends Component {
       events,
       backgroundEvents,
       range,
+      weekrange,
       width,
       rtl,
       selected,
@@ -159,7 +161,10 @@ export default class TimeGrid extends Component {
       longPressThreshold,
       resizable,
     } = this.props
-
+    let headerrange = range;
+    if (weekrange) {
+      headerrange = weekrange;
+    }
     width = width || this.state.gutterWidth
 
     let start = range[0],
@@ -204,7 +209,7 @@ export default class TimeGrid extends Component {
         )}
       >
         <TimeGridHeader
-          range={range}
+          range={headerrange}
           events={allDayEvents}
           width={width}
           rtl={rtl}

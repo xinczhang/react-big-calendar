@@ -21,11 +21,12 @@ class Day extends React.Component {
       ...props
     } = this.props
     let range = Day.range(date, { localizer: localizer })
-
+    let weekrange = Day.weekrange(date, { localizer: localizer })
     return (
       <TimeGrid
         {...props}
         range={range}
+        weekrange={weekrange}
         eventOffset={10}
         localizer={localizer}
         min={min}
@@ -48,6 +49,14 @@ Day.propTypes = {
 
 Day.range = (date, { localizer }) => {
   return [localizer.startOf(date, 'day')]
+}
+
+Day.weekrange = (date, { localizer }) => {
+  let firstOfWeek = localizer.startOfWeek()
+  let start = localizer.startOf(date, 'week', firstOfWeek)
+  let end = localizer.endOf(date, 'week', firstOfWeek)
+
+  return localizer.range(start, end)
 }
 
 Day.navigate = (date, action, { localizer }) => {
