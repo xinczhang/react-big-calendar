@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Header = ({ label }) => {
+const Header = ({ label, chinese_label, has_event }) => {
   return (
-    <span role="columnheader" aria-sort="none">
-      {label}
-    </span>
+    <div role="columnheader" aria-sort="none">
+      <div>{chinese_label}</div>
+      <div>{label}</div>
+      
+    </div>
   )
 }
 

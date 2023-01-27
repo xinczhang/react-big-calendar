@@ -16,6 +16,7 @@ class TimeGridHeader extends React.Component {
 
   renderHeaderCells(range) {
     let {
+      events,
       localizer,
       getDrilldownView,
       getNow,
@@ -24,15 +25,18 @@ class TimeGridHeader extends React.Component {
     } = this.props
 
     const today = getNow()
-
+    const chinese_week = {'Sun':'日','Mon':'一','Tue':'二 ','Wed':'三','Thu':'四','Fri':'五','Sat':'六'};
     return range.map((date, i) => {
       let drilldownView = getDrilldownView(date)
-      let label = localizer.format(date, 'dayFormat')
+      let labels = localizer.format(date, 'dayFormat').split(' ');
+      let label = labels[0]
+      let chinese_label = chinese_week[labels[1]];
+      let has_event = events.length > 0;
 
       const { className, style } = dayProp(date)
 
       let header = (
-        <HeaderComponent date={date} label={label} localizer={localizer} />
+        <HeaderComponent date={date} label={label} chinese_label={chinese_label} has_event={has_event} localizer={localizer} />
       )
 
       return (
