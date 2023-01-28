@@ -14,6 +14,7 @@ import { inRange, sortEvents } from './utils/eventLevels'
 import Resources from './utils/Resources'
 import { DayLayoutAlgorithmPropType } from './utils/propTypes'
 import { head } from 'lodash'
+import { date } from 'date-arithmetic'
 
 export default class TimeGrid extends Component {
   constructor(props) {
@@ -210,6 +211,7 @@ export default class TimeGrid extends Component {
       >
         <TimeGridHeader
           range={headerrange}
+          currentDate={range[0]}
           events={allDayEvents}
           width={width}
           rtl={rtl}

@@ -16,6 +16,7 @@ class TimeGridHeader extends React.Component {
 
   renderHeaderCells(range) {
     let {
+      currentDate,
       events,
       localizer,
       getDrilldownView,
@@ -46,7 +47,8 @@ class TimeGridHeader extends React.Component {
           className={clsx(
             'rbc-header',
             className,
-            localizer.isSameDate(date, today) && 'rbc-today'
+            localizer.isSameDate(date, currentDate) && 'rbc-selected-header',
+            !localizer.isSameDate(date, currentDate) && localizer.isSameDate(date, today) && 'rbc-today-header'
           )}
         >
           {drilldownView ? (

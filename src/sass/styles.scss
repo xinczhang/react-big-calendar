@@ -2,7 +2,6 @@
 @import './reset';
 
 .rbc-calendar {
-  box-sizing: border-box;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -43,6 +42,10 @@
   background: $out-of-range-bg-color;
 }
 
+.chineselabel {
+  height: 27.5px;
+}
+
 .rbc-header {
   overflow: hidden;
   flex: 1 0 0%;
@@ -53,16 +56,17 @@
   vertical-align: middle;
   font-weight: bold;
   font-size: 90%;
-  min-height: 0;
-  border-bottom: 1px solid $cell-border;
+  min-height: 55px;
+  min-width: 32px;
+  border-bottom: 0px solid $cell-border;
 
   & + & {
-    border-left: 1px solid $cell-border;
+    border-left: 0px solid $cell-border;
   }
 
   .rbc-rtl & + & {
     border-left-width: 0;
-    border-right: 1px solid $cell-border;
+    border-right: 0px solid $cell-border;
   }
 
   & > a {
@@ -111,8 +115,15 @@
   }
 }
 
-.rbc-today {
-  background-color: $today-highlight-bg;
+.rbc-today-header {
+  background-color: #F2F2F6;
+  color: #007AFF;
+  border-radius: 6px;
+}
+.rbc-selected-header {
+  background-color: #007AFF;
+  color: white;
+  border-radius: 6px;
 }
 
 @import './toolbar';

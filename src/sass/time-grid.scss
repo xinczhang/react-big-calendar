@@ -18,6 +18,7 @@
 .rbc-time-view {
   display: flex;
   flex-direction: column;
+  background-color: #F2F2F6;
   flex: 1;
   width: 100%;
   border: 1px solid $calendar-border;
@@ -35,7 +36,7 @@
     position: relative;
   }
   .rbc-allday-cell + .rbc-allday-cell {
-    border-left: 1px solid $cell-border;
+    border-left: 0px solid $cell-border;
   }
 
   .rbc-allday-events {
@@ -53,22 +54,22 @@
   display: flex;
   flex: 0 0 auto; // should not shrink below height
   flex-direction: row;
-
+  background-color: white;
   &.rbc-overflowing {
-    border-right: 1px solid $cell-border;
+    border-right: 0px solid $cell-border;
   }
 
   .rbc-rtl &.rbc-overflowing {
     border-right-width: 0;
-    border-left: 1px solid $cell-border;
+    border-left: 0px solid $cell-border;
   }
 
   > .rbc-row:first-child {
-    border-bottom: 1px solid $cell-border;
+    border-bottom: 0px solid $cell-border;
   }
 
   > .rbc-row.rbc-row-resource {
-    border-bottom: 1px solid $cell-border;
+    border-bottom: 0px solid $cell-border;
   }
 
   // .rbc-gutter-cell {
@@ -89,15 +90,15 @@
   display: flex;
   min-width: 0;
   flex-direction: column;
-  border-left: 1px solid $cell-border;
+  border-left: 0px solid $cell-border;
 
   .rbc-rtl & {
     border-left-width: 0;
-    border-right: 1px solid $cell-border;
+    border-right: 0px solid $cell-border;
   }
 
   > .rbc-row.rbc-row-resource {
-    border-bottom: 1px solid $cell-border;
+    border-bottom: 0px solid $cell-border;
     flex-shrink: 0;
   }
 }
@@ -107,7 +108,7 @@
   flex: 1 0 0%;
   align-items: flex-start;
   width: 100%;
-  border-top: 2px solid $calendar-border;
+  border-top: 0px solid $calendar-border;
   overflow-y: auto;
   position: relative;
 
@@ -116,7 +117,7 @@
   }
 
   > * + * > * {
-    border-left: 1px solid $cell-border;
+    border-left: 0px solid $cell-border;
   }
 
   .rbc-rtl & > * + * > * {
