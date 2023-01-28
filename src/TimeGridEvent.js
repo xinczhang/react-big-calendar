@@ -28,7 +28,7 @@ function TimeGridEvent(props) {
   let tooltip = accessors.tooltip(event)
   let end = accessors.end(event)
   let start = accessors.start(event)
-
+  let eventType = accessors.eventType(event)
   let userProps = getters.eventProp(event, start, end, selected)
 
   let { height, top, width, xOffset } = style
@@ -71,6 +71,7 @@ function TimeGridEvent(props) {
             : undefined
         }
         className={clsx(
+          eventType ? eventType : undefined,
           isBackgroundEvent ? 'rbc-background-event' : 'rbc-event',
           className,
           userProps.className,

@@ -201,7 +201,6 @@ export default class TimeGrid extends Component {
     })
 
     allDayEvents.sort((a, b) => sortEvents(a, b, accessors, localizer))
-
     return (
       <div
         className={clsx(
@@ -213,6 +212,7 @@ export default class TimeGrid extends Component {
           range={headerrange}
           currentDate={range[0]}
           events={allDayEvents}
+          allEvents={events}
           width={width}
           rtl={rtl}
           getNow={getNow}

@@ -5,8 +5,8 @@ const Header = ({ label, chinese_label, has_event }) => {
   return (
     <div role="columnheader" aria-sort="none">
       <div className="chineselabel">{chinese_label}</div>
-      <div>{label}</div>
-      <div>&#x2022;</div>
+      <div className="daylabel">{label}</div>
+      <div className={!has_event ? 'no-event-day' : undefined}>&#x2022;</div>
     </div>
   )
 }

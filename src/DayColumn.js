@@ -211,6 +211,7 @@ class DayColumn extends React.Component {
     return styledEvents.map(({ event, style }, idx) => {
       let end = accessors.end(event)
       let start = accessors.start(event)
+      let eventType = accessors.eventType(event)
       let format = 'eventTimeRangeFormat'
       let label
 
@@ -230,6 +231,7 @@ class DayColumn extends React.Component {
         <TimeGridEvent
           style={style}
           event={event}
+          eventType={eventType}
           label={label}
           key={'evt_' + idx}
           getters={getters}

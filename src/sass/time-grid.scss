@@ -55,6 +55,7 @@
   flex: 0 0 auto; // should not shrink below height
   flex-direction: row;
   background-color: white;
+  border-radius: 0 0 6px 6px;
   &.rbc-overflowing {
     border-right: 0px solid $cell-border;
   }

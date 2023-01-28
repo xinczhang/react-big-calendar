@@ -7,7 +7,8 @@ import DateContentRow from './DateContentRow'
 import Header from './Header'
 import ResourceHeader from './ResourceHeader'
 import { notify } from './utils/helpers'
-
+import { inRange } from './utils/eventLevels'
+import { startOf, endOf } from './utils/dates'
 class TimeGridHeader extends React.Component {
   handleHeaderClick = (date, view, e) => {
     e.preventDefault()
@@ -17,7 +18,8 @@ class TimeGridHeader extends React.Component {
   renderHeaderCells(range) {
     let {
       currentDate,
-      events,
+      allEvents,
+      accessors,
       localizer,
       getDrilldownView,
       getNow,
@@ -32,7 +34,14 @@ class TimeGridHeader extends React.Component {
       let labels = localizer.format(date, 'dayFormat').split(' ');
       let label = labels[0]
       let chinese_label = chinese_week[labels[1]];
-      let has_event = events.length > 0;
+      let has_event = false;
+     
+      allEvents.forEach((event) => {
+        if (inRange(event, startOf(date, 'day'), endOf(date, 'day'), accessors, localizer)) {
+          has_event = true;
+          console.log(event, startOf(date, 'day'),endOf(date, 'day'));
+        }
+      });
 
       const { className, style } = dayProp(date)
 

@@ -195,6 +195,17 @@ class Calendar extends React.Component {
     allDayAccessor: accessor,
 
     /**
+     * The type of the event. Must resolve to a JavaScript `String` object.
+     *
+     * ```js
+     * string | (event: Object) => String
+     * ```
+     *
+     * @type {(func|string)}
+     */
+     eventTypeAccessor: accessor,
+
+    /**
      * The start date/time of the event. Must resolve to a JavaScript `Date` object.
      *
      * ```js
@@ -864,6 +875,7 @@ class Calendar extends React.Component {
     tooltipAccessor: 'title',
     allDayAccessor: 'allDay',
     startAccessor: 'start',
+    eventTypeAccessor: 'eventType',
     endAccessor: 'end',
     resourceAccessor: 'resourceId',
 
@@ -887,6 +899,7 @@ class Calendar extends React.Component {
   }
 
   static getContext({
+    eventTypeAccessor,
     startAccessor,
     endAccessor,
     allDayAccessor,
@@ -935,6 +948,7 @@ class Calendar extends React.Component {
         timeGutterWrapper: NoopWrapper,
       }),
       accessors: {
+        eventType: wrapAccessor(eventTypeAccessor),
         start: wrapAccessor(startAccessor),
         end: wrapAccessor(endAccessor),
         allDay: wrapAccessor(allDayAccessor),

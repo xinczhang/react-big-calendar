@@ -40,7 +40,7 @@ export default function DragAndDrop({ localizer }) {
     [setMyEvents]
   )
 
-  const defaultDate = useMemo(() => new Date(2015, 3, 12), [])
+  const defaultDate = useMemo(() => new Date(2023, 1, 27), [])
 
   return (
     <Fragment>
