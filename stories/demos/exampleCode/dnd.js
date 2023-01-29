@@ -40,8 +40,16 @@ export default function DragAndDrop({ localizer }) {
     [setMyEvents]
   )
 
-  const defaultDate = useMemo(() => new Date(2023, 1, 27), [])
-
+  const { defaultDate, views } = useMemo(
+    () => ({
+      defaultDate: new Date(2023, 1, 27),
+      views: {
+        week: true,
+        day: true,
+      },
+    }),
+    []
+  )
   return (
     <Fragment>
       <DemoLink fileName="dnd">
@@ -53,11 +61,12 @@ export default function DragAndDrop({ localizer }) {
       <div className="height600">
         <DragAndDropCalendar
           defaultDate={defaultDate}
-          defaultView={Views.MONTH}
+          defaultView={Views.WEEK}
           events={myEvents}
           localizer={localizer}
           onEventDrop={moveEvent}
           onEventResize={resizeEvent}
+          views={views}
           popup
           resizable
         />

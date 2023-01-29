@@ -39,7 +39,6 @@ class TimeGridHeader extends React.Component {
       allEvents.forEach((event) => {
         if (inRange(event, startOf(date, 'day'), endOf(date, 'day'), accessors, localizer)) {
           has_event = true;
-          console.log(event, startOf(date, 'day'),endOf(date, 'day'));
         }
       });
 

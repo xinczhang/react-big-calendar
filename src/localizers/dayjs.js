@@ -41,6 +41,7 @@ export const formats = {
 
   timeGutterFormat: 'LT',
 
+  standradHeaderFormat: 'MM/YYYY',
   monthHeaderFormat: 'MMMM YYYY',
   dayHeaderFormat: 'dddd MMM DD',
   dayRangeHeaderFormat: weekRangeFormat,

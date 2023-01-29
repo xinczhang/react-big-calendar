@@ -72,6 +72,6 @@ Day.navigate = (date, action, { localizer }) => {
   }
 }
 
-Day.title = (date, { localizer }) => localizer.format(date, 'dayHeaderFormat')
+Day.title = (date, { localizer }) => localizer.format(date, 'MM/YYYY')
 
 export default Day
