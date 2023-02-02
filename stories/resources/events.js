@@ -136,8 +136,8 @@ export default [
     id: 16,
     title: 'Large Event',
     eventType: 'large-event-type',
-    start: new Date(new Date().setHours(new Date().getHours() - 2)),
-    end: new Date(new Date().setHours(new Date().getHours() - 1)),
+    start: new Date(new Date().setHours(14)),
+    end: new Date(new Date().setHours(15)),
   },
   {
     id: 17,

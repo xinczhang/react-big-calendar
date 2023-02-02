@@ -58,7 +58,7 @@ export default function DragAndDrop({ localizer }) {
           or drag an event's drag handles to "resize" the event.
         </strong>
       </DemoLink>
-      <div className="height600">
+      <div className="height1136">
         <DragAndDropCalendar
           defaultDate={defaultDate}
           defaultView={Views.WEEK}

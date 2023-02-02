@@ -142,9 +142,9 @@ class TimeGridHeader extends React.Component {
     } = this.props
 
     let style = {}
-    if (isOverflowing) {
-      style[rtl ? 'marginLeft' : 'marginRight'] = `${scrollbarSize()}px`
-    }
+    //if (isOverflowing) {
+    //  style[rtl ? 'marginLeft' : 'marginRight'] = `${scrollbarSize()}px`
+   // }
 
     const groupedEvents = resources.groupEvents(events)
 

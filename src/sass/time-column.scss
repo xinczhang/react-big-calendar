@@ -13,7 +13,7 @@
 
 .rbc-timeslot-group {
   border-bottom: 1px solid $cell-border;
-  min-height: 40px;
+  min-height: 80px;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -30,7 +30,7 @@
   font-family: 'Open Sans';
   font-style: normal;
 
-  font-size: 9px;
+  font-size: 18px;
   line-height: 25px;
   color: #8A8A8D;
 

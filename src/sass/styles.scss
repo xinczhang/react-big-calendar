@@ -43,14 +43,14 @@
 }
 
 .chineselabel {
-  height: 27.5px;
-  font-size: 10px;
+  height: 45px;
+  font-size: 20px;
   color: #CACCCD;
 }
 
 .daylabel{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -93,9 +93,9 @@
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
-  font-size: 90%;
-  min-height: 55px;
-  min-width: 32px;
+  font-size: 28px;
+  min-height: 110px;
+  min-width: 64px;
   border-bottom: 0px solid $cell-border;
 
   & + & {
