@@ -39,7 +39,7 @@ class Toolbar extends React.Component {
             type="button"
             key="week"
             className={clsx({ 'rbc-active': this.props.view === "week" })}
-            onClick={this.view.bind(null, "week")}
+            onClick={this.view.bind(null, this.props.view === "week" ? "day" : "week" )}
           >
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_36_109)">

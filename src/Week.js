@@ -50,10 +50,10 @@ Week.defaultProps = TimeGrid.defaultProps
 Week.navigate = (date, action, { localizer }) => {
   switch (action) {
     case navigate.PREVIOUS:
-      return localizer.add(date, -1, 'week')
+      return localizer.add(date, -1, 'day')
 
     case navigate.NEXT:
-      return localizer.add(date, 1, 'week')
+      return localizer.add(date, 1, 'day')
 
     default:
       return date
