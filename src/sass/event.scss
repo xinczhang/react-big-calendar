@@ -8,7 +8,7 @@
   padding: $event-padding;
   background-color: $event-bg;
   border-radius: $event-border-radius;
-  color: $event-color;
+  color: black;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -29,6 +29,11 @@
 
 .rbc-event-label {
   @extend .rbc-ellipsis;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
   font-size: 20px;
 }
 
