@@ -158,7 +158,13 @@
     scrollbar-width: none; /* Firefox */
   }
 }
-
+.columnheader {
+  .no-event-day {
+    .has-event {
+      fill: none;
+    }
+  }
+}
 .rbc-today-header {
   .columnheader {
     width: 64px;
@@ -177,6 +183,11 @@
     border-radius: 6px;
     .has-event {
       fill: white;
+    }
+    .no-event-day {
+      .has-event {
+        fill: none;
+      }
     }
   }
 }
