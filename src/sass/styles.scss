@@ -43,12 +43,13 @@
 }
 
 .chineselabel {
-  height: 45px;
+  padding-top: 6px;
   font-size: 20px;
   color: #CACCCD;
 }
 
 .daylabel{
+  padding-top: 22px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 700;
@@ -59,29 +60,34 @@
 }
 
 .call-type {
-  background-color: #A2E4FF!important;
+  background-color: #A2E4FF !important;
+  color: black !important;
 }
 
 .call-done-type {
-  background-color: #FFFFFF!important;
-  color: #00ACFB!important;
-  border: 2px dashed #00ACFB!important;
+  background-color: #FFFFFF !important;
+  color: #00ACFB !important;
+  border: 2px dashed #00ACFB !important;
 }
 
 .small-event-type {
-  background-color: #FFD99D!important;
+  background-color: #FFD99D !important;
+  color: black !important;
 }
 
 .large-event-type {
-  background-color: #ADEFB7!important;
+  background-color: #ADEFB7 !important;
+  color: black !important;
 }
 
 .tot-type {
-  background-color: #DFACF8!important;
+  background-color: #DFACF8 !important;
+  color: black !important;
 }
 
 .tutorial-type {
-  background-color: #FF8F89!important;
+  background-color: #FF8F89 !important;
+  color: black !important;
 }
 
 .rbc-header {
@@ -154,14 +160,25 @@
 }
 
 .rbc-today-header {
-  background-color: #F2F2F6;
-  color: #007AFF;
-  border-radius: 6px;
+  .columnheader {
+    width: 64px;
+    height: 110px;
+    background-color: #F2F2F6;
+    color: #007AFF;
+    border-radius: 6px;
+  }
 }
 .rbc-selected-header {
-  background-color: #007AFF;
-  color: white;
-  border-radius: 6px;
+  .columnheader {
+    width: 64px;
+    height: 110px;
+    background-color: #007AFF;
+    color: white;
+    border-radius: 6px;
+    .has-event {
+      fill: white;
+    }
+  }
 }
 
 @import './toolbar';

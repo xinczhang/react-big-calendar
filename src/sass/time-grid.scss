@@ -55,7 +55,7 @@
   flex: 0 0 auto; // should not shrink below height
   flex-direction: row;
   background-color: white;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 12px 12px;
   &.rbc-overflowing {
     border-right: 0px solid $cell-border;
   }
@@ -102,6 +102,7 @@
     border-bottom: 0px solid $cell-border;
     flex-shrink: 0;
   }
+  padding-bottom: 16px;
 }
 
 .rbc-time-content {
